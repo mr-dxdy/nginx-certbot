@@ -1,0 +1,11 @@
+version: '3'
+services:
+    nginx_certbot:
+        image: mr-dxdy/nginx-certbot:latest
+        restart: always
+        volumes:
+            - ./volumes/letsencrypt:/etc/letsencrypt/
+            - ./volumes/conf:/etc/nginx/conf.d/
+        ports:
+            - 80:80
+            - 443:443

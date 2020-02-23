@@ -17,7 +17,7 @@ test_renewal_certificates:
 	docker-compose exec nginx_certbot certbot renew --dry-run
 
 build_image:
-	docker build . --no-cache --tag mr-dxdy/nginx-certbot:${VERSION}
+	docker build . --no-cache --tag mrdxdy/nginx-certbot:${VERSION}
 
 publish_image:
-	docker push mr-dxdy/nginx-certbot:${VERSION}
+	docker push mrdxdy/nginx-certbot:${VERSION}
